@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+         form{
+        width:50% !important;
+        display: block;
+        margin:100px auto;
+    }
+    </style>
+    <body>
+    
+
+  <form action="/complaint" method="POST">
+   
+    <%if(alert.length>0) {%>
+        <div class="alert alert-success" role="alert">
+            <%= alert %>
+          </div>
+    <%}%>
+
+    <h1>File Complaint</h1>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Enter Fullname</label>
+      <input name='name' type="text" class="form-control" id="exampleFormControlInput1" placeholder="fullname">
+    </div>
+   
+  
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">what's the problem?</label>
+      <textarea name='complaint' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">what can we do?</label>
+        <textarea name='solution' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <button  type="submit" class="btn btn-primary">Submit</button>
+  </form>
+    </body>
+   
+</html>

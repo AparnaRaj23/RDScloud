@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+   .card{
+       background-color: antiquewhite;
+       padding:20px;
+       margin-right:20px;
+   }
+   .card-wrapper{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding:50px;
+   }
+</style>
+    </head>
+    <body>
+        <h1 style='text-align: center;'>Customer's complaints</h1>
+        <div class='card-wrapper'>
+             
+        <% for(var i=0; i<rows.length; i++){ %>
+            <div class="card" style="width: 58rem;">
+                <h5 class="card-title"><%= rows[i].complaint %></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><%= rows[i].name %></h6>
+                <p class="card-text"><%= rows[i].solution %></p>
+
+       
+           
+           </div>
+        <% } %>
+        </div>
+    </body>
+</html>
+
